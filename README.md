@@ -1,20 +1,13 @@
-## TemplateDevEnv
+# SlashBlade Japanese Addon Pack - Rebalanced
 
-Template workspace for modding Minecraft 1.12.2. Licensed under MIT, it is made for public use.
+## Overview
 
-This template currently utilizies **Gradle 8.1.1** + **[RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle) 1.3.6** + **Forge 14.23.5.2847**.
+This is a fork of [0999312/SlashBlade-Japanese-Addon-Pack](https://github.com/0999312/SlashBlade-Japanese-Addon-Pack).
 
-With **coremod and mixin support** that is easy to configure.
+Built with the [CleanroomMC/TemplateDevEnv](https://github.com/CleanroomMC/TemplateDevEnv) for easier Minecraft 1.12.2 modding.
 
-### Instructions:
+Powered by [MARYT Studio](https://github.com/MARYT-Studio).
 
-1. Click `use this template` at the top.
-2. Clone the repository you have created with this template.
-3. In the local repository, run the command `gradlew setupDecompWorkspace`
-4. Open the project folder in IDEA.
-5. Right-click in IDEA `build.gradle` of your project, and select `Link Gradle Project`, after completion, hit `Refresh All` in the gradle tab on the right.
-6. Run `gradlew runClient` and `gradlew runServer`, or use the auto-imported run configurations in IntelliJ like `1. Run Client`.
+## License
 
-### Mixins:
-
-- When writing Mixins on IntelliJ, it is advisable to use latest [MinecraftDev Fork for RetroFuturaGradle](https://github.com/eigenraven/MinecraftDev/releases).
+This repository's license keeps the same license as its [upstream](https://github.com/0999312/SlashBlade-Japanese-Addon-Pack).

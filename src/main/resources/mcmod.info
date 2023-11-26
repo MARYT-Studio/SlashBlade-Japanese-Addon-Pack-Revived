@@ -1,16 +1,18 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "slashblade_addon",
+  "name": "SlashBlade Japanese Addon Pack",
+  "description":"SlashBlade Japanese Addon in 1.12.2",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["CleanroomMC"],
-  "credits": "Authors of this project",
+  "authors": [ "Syameimaru_Zheng"],
+  "credits": "Ferne&Furia",
   "logoFile": "",
+  "parent":"",
   "screenshots": [],
+  "requiredMods": ["MinecraftForge,SlashBlade-mc1.12-r15"],
   "dependencies": []
 }
 ]
