@@ -157,11 +157,11 @@ dependencies {
     implementation rfg.deobf('curse.maven:mysterious-mountain-lib-368098:3254750')
     implementation rfg.deobf('curse.maven:sakura-333079:3254753')
     // Optional Mod Dependencies
-    implementation rfg.deobf('curse.maven:baubles-227083:2518667')
-    implementation rfg.deobf('curse.maven:patchouli-306770:3162874')
-	implementation rfg.deobf('curse.maven:botania-225643:3330934')
-	implementation rfg.deobf('curse.maven:thaumcraft-223628:2629023')
-	implementation rfg.deobf('curse.maven:the-twilight-forest-227639:3051450')
+    compileOnly rfg.deobf('curse.maven:baubles-227083:2518667')
+    compileOnly rfg.deobf('curse.maven:patchouli-306770:3162874')
+    compileOnly rfg.deobf('curse.maven:botania-225643:3330934')
+    compileOnly rfg.deobf('curse.maven:thaumcraft-223628:2629023')
+    compileOnly rfg.deobf('curse.maven:the-twilight-forest-227639:3051450')
 }
 
 // Adds Access Transformer files to tasks
