@@ -1,5 +1,7 @@
-package cn.mmf.slashblade_addon.mixins.dupe_blade_fixes;
+package cn.mmf.slashblade_addon.core.mixins.dupe_blade_fixes;
 
+import cn.mmf.slashblade_addon.network.MessageTossDirtyBlade;
+import cn.mmf.slashblade_addon.network.MessageTossDirtyBladeHandler;
 import mods.flammpfeil.slashblade.network.*;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;

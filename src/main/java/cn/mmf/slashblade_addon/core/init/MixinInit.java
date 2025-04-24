@@ -1,4 +1,4 @@
-package cn.mmf.slashblade_addon.mixins.init;
+package cn.mmf.slashblade_addon.core.init;
 
 import static cn.mmf.slashblade_addon.SJAP.MOD_ID;
 import zone.rong.mixinbooter.ILateMixinLoader;

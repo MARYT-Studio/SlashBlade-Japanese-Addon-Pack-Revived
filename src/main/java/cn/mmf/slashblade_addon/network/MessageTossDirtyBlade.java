@@ -1,4 +1,4 @@
-package cn.mmf.slashblade_addon.mixins.dupe_blade_fixes;
+package cn.mmf.slashblade_addon.network;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;

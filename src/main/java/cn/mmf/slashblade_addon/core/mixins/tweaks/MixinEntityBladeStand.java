@@ -1,6 +1,6 @@
-package cn.mmf.slashblade_addon.mixins.tweaks;
+package cn.mmf.slashblade_addon.core.mixins.tweaks;
 
-import cn.mmf.slashblade_addon.mixins.interfaces.IMixinEntityBladeStand;
+import cn.mmf.slashblade_addon.core.interfaces.IMixinEntityBladeStand;
 import mods.flammpfeil.slashblade.entity.EntityBladeStand;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;

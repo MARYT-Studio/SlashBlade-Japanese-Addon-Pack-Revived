@@ -1,6 +1,6 @@
-package cn.mmf.slashblade_addon.mixins.tweaks;
+package cn.mmf.slashblade_addon.core.mixins.tweaks;
 
-import cn.mmf.slashblade_addon.mixins.interfaces.IMixinEntityBladeStand;
+import cn.mmf.slashblade_addon.core.interfaces.IMixinEntityBladeStand;
 import mods.flammpfeil.slashblade.entity.EntityBladeStand;
 import mods.flammpfeil.slashblade.entity.EntityGrimGripKey;
 import mods.flammpfeil.slashblade.item.ItemProudSoul;

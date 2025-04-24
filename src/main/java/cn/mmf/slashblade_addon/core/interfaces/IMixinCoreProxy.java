@@ -1,6 +1,6 @@
-package cn.mmf.slashblade_addon.mixins.interfaces;
+package cn.mmf.slashblade_addon.core.interfaces;
 
-import cn.mmf.slashblade_addon.mixins.dupe_blade_fixes.MessageTossDirtyBlade;
+import cn.mmf.slashblade_addon.network.MessageTossDirtyBlade;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 

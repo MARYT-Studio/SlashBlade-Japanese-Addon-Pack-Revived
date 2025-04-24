@@ -1,4 +1,4 @@
-package cn.mmf.slashblade_addon.mixins.interfaces;
+package cn.mmf.slashblade_addon.core.interfaces;
 
 import net.minecraft.item.ItemStack;
 

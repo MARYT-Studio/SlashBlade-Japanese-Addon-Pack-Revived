@@ -91,7 +91,7 @@ public class RecipeNihil extends ShapedOreRecipe {
 
 
 	private static boolean matchesName(ItemStack slot, ItemStack required)	{
-		return slot.getUnlocalizedName().equals(required.getUnlocalizedName());
+		return slot.getTranslationKey().equals(required.getTranslationKey());
 	}
 
 	private static boolean matchesCount(ItemStack slot, ItemStack required)	{

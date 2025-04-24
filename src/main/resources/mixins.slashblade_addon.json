@@ -1,5 +1,5 @@
 {
-	"package": "cn.mmf.slashblade_addon.mixins",
+	"package": "cn.mmf.slashblade_addon.core.mixins",
 	"required": true,
 	"refmap": "mixins.slashblade_addon.refmap.json",
 	"target": "@env(DEFAULT)",

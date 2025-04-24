@@ -1,4 +1,4 @@
-package cn.mmf.slashblade_addon.mixins.tweaks;
+package cn.mmf.slashblade_addon.core.mixins.tweaks;
 
 import com.google.common.collect.Maps;
 import mods.flammpfeil.slashblade.item.ItemProudSoul;

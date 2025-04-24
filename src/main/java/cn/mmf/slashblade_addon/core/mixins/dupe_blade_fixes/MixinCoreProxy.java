@@ -1,6 +1,7 @@
-package cn.mmf.slashblade_addon.mixins.dupe_blade_fixes;
+package cn.mmf.slashblade_addon.core.mixins.dupe_blade_fixes;
 
-import cn.mmf.slashblade_addon.mixins.interfaces.IMixinCoreProxy;
+import cn.mmf.slashblade_addon.core.interfaces.IMixinCoreProxy;
+import cn.mmf.slashblade_addon.network.MessageTossDirtyBlade;
 import mods.flammpfeil.slashblade.core.CoreProxy;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
