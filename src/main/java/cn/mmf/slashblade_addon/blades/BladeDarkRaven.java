@@ -1,5 +1,6 @@
 package cn.mmf.slashblade_addon.blades;
 
+import cn.mmf.slashblade_addon.ConfigLoader;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
@@ -24,12 +25,12 @@ public class BladeDarkRaven {
 	        NBTTagCompound tag = new NBTTagCompound();
 	        customblade.setTagCompound(tag);
 	        ItemSlashBladeNamed.CurrentItemName.set(tag, namedr);
-	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, Integer.valueOf(80));
+	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, 80);
 	        ItemSlashBlade.setBaseAttackModifier(tag, 4.0F+ToolMaterial.DIAMOND.getAttackDamage());
 	        ItemSlashBlade.TextureName.set(tag, "named/darkraven/darkraven");
 	        ItemSlashBlade.ModelName.set(tag, "named/darkraven/darkraven");
-	        ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(2));
-	        ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));
+	        ItemSlashBlade.SpecialAttackType.set(tag, 2);
+	        ItemSlashBlade.StandbyRenderType.set(tag, 2);
 	        
 	        SlashBlade.registerCustomItemStack(namedr, customblade);
 	        ItemSlashBladeNamed.NamedBlades.add(namedr);
@@ -40,11 +41,11 @@ public class BladeDarkRaven {
 	        NBTTagCompound tag = new NBTTagCompound();
 	        customblade.setTagCompound(tag);
 	        ItemSlashBladeNamed.CurrentItemName.set(tag, namesc);
-	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, Integer.valueOf(60));
+	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, 60);
 	        ItemSlashBlade.setBaseAttackModifier(tag, 4.0F+ToolMaterial.IRON.getAttackDamage());
 	        ItemSlashBlade.TextureName.set(tag, "named/darkraven/snowcrow");
 	        ItemSlashBlade.ModelName.set(tag, "named/darkraven/snowcrow");
-	        ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));
+	        ItemSlashBlade.StandbyRenderType.set(tag, 2);
 	        
 	        SlashBlade.registerCustomItemStack(namesc, customblade);
 	        ItemSlashBladeNamed.NamedBlades.add(namesc);
@@ -69,8 +70,43 @@ public class BladeDarkRaven {
 	      SlashBlade.mainConfiguration.save();
 	    }
 	    DropEventHandler.registerEntityDrop(new ResourceLocation("twilightforest", "raven"), fact, darkraven);
-	    SlashBlade.addRecipe(namesc, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namesc), snowcrow, doutanuki, new Object[] { " FQ", "SQ ", "B  ", Character.valueOf('Q'),"blockQuartz", Character.valueOf('F'), new ItemStack(Items.FEATHER), Character.valueOf('S'), new ItemStack(Items.SNOWBALL), Character.valueOf('B'), doutanuki 
-	    		}));
+
+		// Recipe of Dark Raven, hidden by default,
+		// so that player still needs to get it from the Twilight Forest.
+		if (ConfigLoader.darkRaven_Recipe) {
+			SlashBlade.addRecipe(
+					namedr,
+					new RecipeAwakeBlade(
+							new ResourceLocation("flammpfeil.slashblade",namesc),
+							darkraven,
+							doutanuki,
+							" FQ",
+							"SQ ",
+							"B  ",
+							'Q',"blockCoal",
+							'F', new ItemStack(Items.FEATHER),
+							'S', "dyeBlack",
+							'B', doutanuki
+					)
+			);
+		}
+
+		// Recipe of Snow Crow
+		SlashBlade.addRecipe(
+				namesc,
+				new RecipeAwakeBlade(
+						new ResourceLocation("flammpfeil.slashblade",namesc),
+						snowcrow,
+						doutanuki,
+						" FQ",
+						"SQ ",
+						"B  ",
+                        'Q',"blockQuartz",
+						'F', new ItemStack(Items.FEATHER),
+                        'S', new ItemStack(Items.SNOWBALL),
+                        'B', doutanuki
+				)
+		);
 	}
 	
 }

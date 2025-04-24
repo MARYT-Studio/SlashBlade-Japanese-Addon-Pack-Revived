@@ -18,7 +18,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class SJAP {
 	public static final String MOD_ID = Tags.MOD_ID;
 	public static final String NAME = "SlashBlade Japanese Addons Pack - Rebalanced";
-	public static final String VERSION = Tags.VERSION;
 
 	@Instance(SJAP.MOD_ID)
 	public static SJAP instance;

@@ -25,7 +25,7 @@ public class BladeBamboo {
 	        NBTTagCompound tag = new NBTTagCompound();
 	        customblade.setTagCompound(tag);
 	        ItemSlashBladeNamed.CurrentItemName.set(tag, namekatana);
-	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, Integer.valueOf(45));
+	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, 45);
 	        ItemSlashBlade.setBaseAttackModifier(tag, 4F);
             ItemSlashBlade.TextureName.set(tag,"BambooKatana");
 	        SlashBlade.registerCustomItemStack(namekatana, customblade);
@@ -36,12 +36,13 @@ public class BladeBamboo {
 	public void InitRecipes(PostInitEvent event){
 	    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
 
-	    SlashBlade.addRecipe(namekatana, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namekatana), SlashBlade.getCustomBlade(namekatana), SlashBlade.getCustomBlade("slashbladeWrapper"),new Object[]{
-				"  S", " W ", "B  ",
-				Character.valueOf('S'), soul,
-				Character.valueOf('B'), ItemLoader.SAKURAKATANA,
-				Character.valueOf('W'), SlashBlade.findItemStack(SlashBlade.modid,"slashbladeWrapper",1)
-		}));
+	    SlashBlade.addRecipe(namekatana, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namekatana), SlashBlade.getCustomBlade(namekatana), SlashBlade.getCustomBlade("slashbladeWrapper"),
+				"  S",
+				" W ",
+				"B  ",
+                'S', soul,
+                'B', ItemLoader.SAKURAKATANA,
+                'W', SlashBlade.findItemStack(SlashBlade.modid,"slashbladeWrapper",1)));
 	}
 	@SubscribeEvent
 	public void InitFoxRecipes(PostInitEvent event){
@@ -53,18 +54,21 @@ public class BladeBamboo {
         ItemSlashBlade.KillCount.set(reqTag1,199);
         ItemSlashBlade.ProudSoul.set(reqTag1,1000);
         ItemSlashBlade.RepairCount.set(reqTag1,1);
-	    ItemStack fox = SlashBlade.findItemStack(SlashBlade.modid,whiteFoxBladeName, 1);
+	    ItemStack whiteFoxBlade = SlashBlade.findItemStack(SlashBlade.modid,whiteFoxBladeName, 1);
 
 	    ItemStack wheat = (Loader.isModLoaded("tofucraft"))
 	    		?SlashBlade.findItemStack("tofucraft","foodset", 1):new ItemStack(Items.WHEAT,1);
 	    		if((Loader.isModLoaded("tofucraft")))wheat.setItemDamage(10);
-	    SlashBlade.addRecipe(whiteFoxBladeName, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,whiteFoxBladeName),fox, whiteFoxBladeMaterial,
-	    		new Object[]{"DAD", "DBD", "DHD",
-                        'H', wheat,
-                        'A', SlashBlade.findItemStack(SlashBlade.modid,SlashBlade.ProudSoulStr,1),
-                        'B', whiteFoxBladeMaterial,
-                        'D', BlockLoader.KITUNEBI
-	    		}));
+	    SlashBlade.addRecipe(whiteFoxBladeName, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,whiteFoxBladeName),whiteFoxBlade, whiteFoxBladeMaterial,
+                "DAD",
+				"DBD",
+				"DHD",
+                'H', wheat,
+                'A', SlashBlade.findItemStack(SlashBlade.modid,SlashBlade.ProudSoulStr,1),
+                'B', whiteFoxBladeMaterial,
+                'D', BlockLoader.KITUNEBI
+				)
+		);
 
 		String nameBlack = "flammpfeil.slashblade.named.fox.black";
 	    ItemStack blackFoxBladeMaterial =SlashBlade.getCustomBlade(namekatana);
@@ -73,13 +77,15 @@ public class BladeBamboo {
         ItemSlashBlade.KillCount.set(reqTag2,199);
         ItemSlashBlade.ProudSoul.set(reqTag2,1000);
         ItemSlashBlade.RepairCount.set(reqTag2,1);
-	    ItemStack fox2 = SlashBlade.findItemStack(SlashBlade.modid,"flammpfeil.slashblade.named.fox.black", 1);
-	    SlashBlade.addRecipe(nameBlack, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,nameBlack),fox2, blackFoxBladeMaterial,
-	    		new Object[]{"DAD", "DBD", "DHD",
-                        'H', wheat,
-                        'A', SlashBlade.findItemStack(SlashBlade.modid,SlashBlade.ProudSoulStr,1),
-                        'B', blackFoxBladeMaterial,
-                        'D', BlockLoader.KITUNEBI
-	    		}));
+	    ItemStack blackFoxBlade = SlashBlade.findItemStack(SlashBlade.modid,"flammpfeil.slashblade.named.fox.black", 1);
+	    SlashBlade.addRecipe(nameBlack, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,nameBlack),blackFoxBlade, blackFoxBladeMaterial,
+                "DAD",
+				"DBD",
+				"DHD",
+                'H', wheat,
+                'A', SlashBlade.findItemStack(SlashBlade.modid,SlashBlade.ProudSoulStr,1),
+                'B', blackFoxBladeMaterial,
+                'D', BlockLoader.KITUNEBI)
+		);
 	}
 }
