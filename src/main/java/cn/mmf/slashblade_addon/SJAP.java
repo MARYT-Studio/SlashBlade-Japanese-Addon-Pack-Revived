@@ -11,9 +11,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Tags.MOD_ID,
 		name = SJAP.NAME,
 		version = Tags.VERSION,
-		acceptedMinecraftVersions = "1.12.2"
-		// TODO: Re-add dependencies
-		// dependencies = "required:mixinbooter@[4.2,);after:jei@[4.15.0,);after:crafttweaker"
+		acceptedMinecraftVersions = "1.12.2",
+	 	dependencies = "required:mixinbooter@[10.2,)"
 		)
 public class SJAP {
 	public static final String MOD_ID = Tags.MOD_ID;
