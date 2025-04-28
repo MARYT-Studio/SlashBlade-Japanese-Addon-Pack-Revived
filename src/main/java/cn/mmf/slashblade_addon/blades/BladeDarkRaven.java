@@ -77,7 +77,7 @@ public class BladeDarkRaven {
 			SlashBlade.addRecipe(
 					namedr,
 					new RecipeAwakeBlade(
-							new ResourceLocation("flammpfeil.slashblade",namesc),
+							new ResourceLocation("flammpfeil.slashblade",namedr),
 							darkraven,
 							doutanuki,
 							" FQ",
