@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 		name = SJAP.NAME,
 		version = Tags.VERSION,
 		acceptedMinecraftVersions = "1.12.2",
-	 	dependencies = "required:mixinbooter@[10.2,)"
+	 	dependencies = "required-after:flammpfeil.slashblade@[mc1.12-r32,);required-after:mm_lib;required-after:mixinbooter@[10.2,)"
 		)
 public class SJAP {
 	public static final String MOD_ID = Tags.MOD_ID;
