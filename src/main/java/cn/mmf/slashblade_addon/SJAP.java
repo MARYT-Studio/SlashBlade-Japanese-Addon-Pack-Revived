@@ -9,14 +9,14 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Tags.MOD_ID,
-		name = SJAP.NAME,
+		name = SJAP.MOD_NAME,
 		version = Tags.VERSION,
 		acceptedMinecraftVersions = "1.12.2",
 	 	dependencies = "required-after:flammpfeil.slashblade@[mc1.12-r32,);required-after:mm_lib;required-after:mixinbooter@[10.2,)"
 		)
 public class SJAP {
 	public static final String MOD_ID = Tags.MOD_ID;
-	public static final String NAME = "SlashBlade Japanese Addons Pack - Rebalanced";
+	public static final String MOD_NAME = Tags.MOD_NAME;
 
 	@Instance(SJAP.MOD_ID)
 	public static SJAP instance;
