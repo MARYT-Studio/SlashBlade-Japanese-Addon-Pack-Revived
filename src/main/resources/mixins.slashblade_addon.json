@@ -1,17 +1,18 @@
 {
-	"package": "cn.mmf.slashblade_addon.core.mixins",
-	"required": true,
-	"refmap": "mixins.slashblade_addon.refmap.json",
-	"target": "@env(DEFAULT)",
-	"minVersion": "0.8.5",
-	"compatibilityLevel": "JAVA_8",
-	"mixins": [
-		"dupe_blade_fixes.MixinCoreProxy",
-		"dupe_blade_fixes.MixinNetworkManager",
-		"tweaks.MixinEntityBladeStand",
-		"tweaks.MixinItemProudSoul",
-		"tweaks.MixinRecipeBladeSoulUpgrade"
-	],
-	"server": [],
-	"client": []
+  "package" : "cn.mmf.slashblade_addon.core.mixins",
+  "required" : true,
+  "refmap" : "mixins.slashblade_addon.refmap.json",
+  "target" : "@env(DEFAULT)",
+  "minVersion" : "0.8.5",
+  "compatibilityLevel" : "JAVA_8",
+  "mixins" : [
+    "dupe_blade_fixes.MixinCoreProxy",
+    "dupe_blade_fixes.MixinNetworkManager",
+    "misc_fixes.MixinAgito",
+    "tweaks.MixinEntityBladeStand",
+    "tweaks.MixinItemProudSoul",
+    "tweaks.MixinRecipeBladeSoulUpgrade"
+  ],
+  "server" : [],
+  "client": []
 }
