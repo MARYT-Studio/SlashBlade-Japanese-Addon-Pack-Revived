@@ -26,37 +26,37 @@ public class BladeZephyr {
 	public static final String namewindeater = "flammpfeil.slashblade.named.windeater";
 	@SubscribeEvent
 	public void InitZephyr(InitEvent event){
-	     ItemStack customblade = new ItemStack(ItemLoader.tcblade,1,0);
-	        NBTTagCompound tag = new NBTTagCompound();
-	        customblade.setTagCompound(tag);
-	        customblade.addEnchantment(Enchantments.POWER, 5);
-	        customblade.addEnchantment(Enchantments.FEATHER_FALLING, 5);
-	        ItemSlashBladeNamed.CurrentItemName.set(tag, name);
-	        ItemSlashBladeNamed.IsDefaultBewitched.set(tag, Boolean.TRUE);
-	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, 70);
-	        ItemSlashBlade.TextureName.set(tag, "zephyr/tex");
-	        ItemSlashBlade.ModelName.set(tag, "zephyr/model");
-	        ItemSlashBlade.SpecialAttackType.set(tag, 1);
-	        ItemSlashBlade.StandbyRenderType.set(tag, 3);
-	        EnumInfusionEnchantment.addInfusionEnchantment(customblade, EnumInfusionEnchantment.ARCING, 3);
-	        SlashBlade.registerCustomItemStack(name, customblade);
-	        ItemSlashBladeNamed.NamedBlades.add(name);
+		ItemStack customblade = new ItemStack(ItemLoader.tcblade,1,0);
+		NBTTagCompound tag = new NBTTagCompound();
+		customblade.setTagCompound(tag);
+		customblade.addEnchantment(Enchantments.POWER, 5);
+		customblade.addEnchantment(Enchantments.FEATHER_FALLING, 5);
+		ItemSlashBladeNamed.CurrentItemName.set(tag, name);
+		ItemSlashBladeNamed.IsDefaultBewitched.set(tag, Boolean.TRUE);
+		ItemSlashBladeNamed.CustomMaxDamage.set(tag, 70);
+		ItemSlashBlade.TextureName.set(tag, "zephyr/tex");
+		ItemSlashBlade.ModelName.set(tag, "zephyr/model");
+		ItemSlashBlade.SpecialAttackType.set(tag, 1);
+		ItemSlashBlade.StandbyRenderType.set(tag, 3);
+		EnumInfusionEnchantment.addInfusionEnchantment(customblade, EnumInfusionEnchantment.ARCING, 3);
+		SlashBlade.registerCustomItemStack(name, customblade);
+		ItemSlashBladeNamed.NamedBlades.add(name);
 	}
 	@SubscribeEvent
 	public void InitWindeater(InitEvent event){
-	     ItemStack customblade = new ItemStack(ItemLoader.tcblade,1,0);
-	        NBTTagCompound tag = new NBTTagCompound();
-	        customblade.setTagCompound(tag);
-	        ItemSlashBladeNamed.CurrentItemName.set(tag, namewindeater);
-	        ItemSlashBladeNamed.IsDefaultBewitched.set(tag, Boolean.TRUE);
-	        ItemSlashBladeNamed.CustomMaxDamage.set(tag, 70);
-	        ItemSlashBlade.TextureName.set(tag, "zephyr/tex");
-	        ItemSlashBlade.ModelName.set(tag, "zephyr/model");
-	        ItemSlashBlade.SpecialAttackType.set(tag, 1);
-	        ItemSlashBlade.StandbyRenderType.set(tag, 3);
-	        EnumInfusionEnchantment.addInfusionEnchantment(customblade, EnumInfusionEnchantment.ARCING, 3);
-	        SlashBlade.registerCustomItemStack(namewindeater, customblade);
-	        ItemSlashBladeNamed.NamedBlades.add(namewindeater);
+		ItemStack customblade = new ItemStack(ItemLoader.tcblade,1,0);
+		NBTTagCompound tag = new NBTTagCompound();
+		customblade.setTagCompound(tag);
+		ItemSlashBladeNamed.CurrentItemName.set(tag, namewindeater);
+		ItemSlashBladeNamed.IsDefaultBewitched.set(tag, Boolean.TRUE);
+		ItemSlashBladeNamed.CustomMaxDamage.set(tag, 70);
+		ItemSlashBlade.TextureName.set(tag, "zephyr/tex");
+		ItemSlashBlade.ModelName.set(tag, "zephyr/model");
+		ItemSlashBlade.SpecialAttackType.set(tag, 1);
+		ItemSlashBlade.StandbyRenderType.set(tag, 3);
+		EnumInfusionEnchantment.addInfusionEnchantment(customblade, EnumInfusionEnchantment.ARCING, 3);
+		SlashBlade.registerCustomItemStack(namewindeater, customblade);
+		ItemSlashBladeNamed.NamedBlades.add(namewindeater);
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
