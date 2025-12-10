@@ -2,13 +2,13 @@ package cn.mmf.slashblade_addon.blades;
 
 import cn.mmf.slashblade_addon.SJAP;
 import cn.mmf.slashblade_addon.item.ItemLoader;
-import cn.mmf.slashblade_addon.recipes.InfusionRecipeSlashBlade;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.PostInitEvent;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.init.Enchantments;
 import net.minecraft.nbt.NBTTagCompound;
@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
@@ -60,12 +61,11 @@ public class BladeZephyr {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-		 ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
-		 ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
-		 ItemStack isESW = new ItemStack(ItemsTC.elementalSword,1,32767);
-		 EnumInfusionEnchantment.addInfusionEnchantment(isESW, EnumInfusionEnchantment.ARCING, 2);
-		 ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(SJAP.MOD_ID,namewindeater),
-				new InfusionRecipeSlashBlade("WINDEATER", SlashBlade.getCustomBlade(namewindeater), 1,
+		ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
+		ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
+		Item isESW = ItemsTC.elementalSword;
+		ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(SJAP.MOD_ID,namewindeater),
+				new InfusionRecipe("WINDEATER", SlashBlade.getCustomBlade(namewindeater), 1,
 						new AspectList().add(Aspect.AIR, 8).add(Aspect.AVERSION, 8).add(Aspect.ENERGY, 8)
 						,isESW,
 						new Object[]{
